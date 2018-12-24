@@ -1,7 +1,7 @@
 package com.example.senix.diablorip;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -86,18 +86,20 @@ public class Main2Activity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-
-
+        Fragment fragment = new Fragment_cabeza();
+        FragmentManager fragmentManager = getSupportFragmentManager();
 
         if (id == R.id.nav_cabeza) {
-
-
+            fragmentManager.beginTransaction()
+                    .replace(R.id.content_frament, fragment)
+                    .commit();
         } else if (id == R.id.nav_hombreras) {
 
         } else if (id == R.id.nav_chest) {

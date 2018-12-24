@@ -5,27 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/cabeza"
-    tools:context="com.example.senix.diablorip.Fragment_Cabeza">
+    tools:context=".Fragment_cabeza">
 
 
-    <include
-        layout="@layout/app_bar_main2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
+
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main2"
-        app:menu="@menu/activity_main2_drawer" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:background="@drawable/banner" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/cabeza"/>
 
 </FrameLayout>
