@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_cabeza"
+            android:icon="@drawable/cabeza"
+            android:title="Cabeza" />
+        <item
+            android:id="@+id/nav_hombreras"
+            android:icon="@drawable/hombreras"
+            android:title="Hombreras" />
+        <item
+            android:id="@+id/nav_chest"
+            android:icon="@drawable/chest"
+            android:title="Torso" />
+        <item
+            android:id="@+id/nav_brazalete"
+            android:icon="@drawable/brazalete"
+            android:title="Brazalete" />
+        <item
+            android:id="@+id/nav_guantes"
+            android:icon="@drawable/guantes"
+            android:title="Guantes" />
+        <item
+            android:id="@+id/nav_cinturon"
+            android:icon="@drawable/cinturon"
+            android:title="Cinturon" />
+        <item
+            android:id="@+id/nav_pantalones"
+            android:icon="@drawable/pantalones"
+            android:title="Pantalones" />
+        <item
+            android:id="@+id/nav_botas"
+            android:icon="@drawable/botas"
+            android:title="Botas" />
+        <item
+            android:id="@+id/nav_armas"
+            android:icon="@drawable/armas"
+            android:title="Armas" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
