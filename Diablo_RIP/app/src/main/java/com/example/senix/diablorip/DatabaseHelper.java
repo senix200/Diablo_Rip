@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.senix.diablorip.model.User;
+
 /**
  * Created by Zoom on 10/1/2018.
  */

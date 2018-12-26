@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Diablo RIP</string>
     <string name="title_activity_main2">Diablo RIP</string>
+    <!--String del POPUP-->
+    <string name="popup_title">Registra un Objeto</string>
+    <string name="pista_objeto">Nombre objeto</string>
+    <string name="pista_descripcion">Descripcion</string>
+    <string name="guardar">Guardar</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
