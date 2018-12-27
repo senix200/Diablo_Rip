@@ -4,6 +4,8 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
+import java.sql.Blob;
+
 @Entity(tableName = "items")
 public class Item {
 
@@ -14,6 +16,7 @@ public class Item {
     @NonNull
     private String description;
 
+
     public Item() {
     }
 
@@ -21,6 +24,7 @@ public class Item {
         this.name = name;
         this.description = description;
         this.id = id;
+
     }
 
     public Item(String name,  String description) {
@@ -53,4 +57,5 @@ public class Item {
     public void setDescription(@NonNull String description) {
         this.description = description;
     }
+
 }

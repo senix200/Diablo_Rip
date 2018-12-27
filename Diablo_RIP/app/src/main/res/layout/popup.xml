@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:padding="25dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -39,17 +41,40 @@
 
     </EditText>
 
+
     <Button
+        android:id="@+id/popupSaveItemButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/popupItemDescription"
-        android:id="@+id/popupSaveItemButton"
-        android:text="@string/guardar"
-        android:textColor="@android:color/white"
+        android:layout_below="@id/imageView2"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="22dp"
         android:background="@color/colorPrimary"
-        android:layout_marginTop="10dp">
+        android:text="@string/guardar"
+        android:textColor="@android:color/white">
 
 
     </Button>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/popupItemName"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="185dp"
+        tools:srcCompat="@tools:sample/avatars[3]" />
+
+    <Button
+        android:id="@+id/btnChoise"
+        android:layout_width="153dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="242dp"
+        android:layout_marginEnd="35dp"
+        android:text="Elige Imagen" />
 
 </RelativeLayout>
