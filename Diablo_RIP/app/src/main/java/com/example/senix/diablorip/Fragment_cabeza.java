@@ -8,12 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class Fragment_cabeza extends Fragment {
-    View myView;
+    public Fragment_cabeza() {
+
+    }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        myView = inflater.inflate(R.layout.fragment_fragment__cabeza, container, false);
-        return myView;
+        View view = inflater.inflate(R.layout.fragment_fragment__cabeza, container, false);
+        return view;
     }
 }

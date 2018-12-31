@@ -6,9 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by Zoom on 10/1/2018.
- */
+import com.example.senix.diablorip.model.User;
+
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -39,6 +38,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.query(DatabaseOptions.USERS_TABLE, new String[]{DatabaseOptions.ID,
                         DatabaseOptions.EMAIL, DatabaseOptions.PASSWORD}, DatabaseOptions.EMAIL + "=? and " + DatabaseOptions.PASSWORD + "=?",
                 new String[]{email, password}, null, null, null, "1");
+
         if (cursor != null)
             cursor.moveToFirst();
         if (cursor != null && cursor.getCount() > 0) {

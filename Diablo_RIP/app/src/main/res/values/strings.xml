@@ -1,12 +1,27 @@
 <resources>
     <string name="app_name">Diablo RIP</string>
     <string name="title_activity_main2">Diablo RIP</string>
+    <!--String del POPUP-->
+    <string name="popup_title">Registra un Objeto</string>
+    <string name="pista_objeto">Nombre objeto</string>
+    <string name="pista_descripcion">Descripcion</string>
+    <string name="guardar">Guardar</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <!--String de las clases-->
+    <string name="classBarbarian">Barbarian</string>
+    <string name="classDemonhunter">Demon Hunter</string>
+    <string name="classMonk">Monk</string>
+    <string name="classNecromancer">Necromancer</string>
+    <string name="classWizard">Wizard</string>
+    <string name="classWitchDoctor">Witch Doctor</string>
+    <string name="classCrusader">Crusader</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

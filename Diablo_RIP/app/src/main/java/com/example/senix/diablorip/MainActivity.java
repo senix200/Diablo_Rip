@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.List;
+import com.example.senix.diablorip.model.User;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!emptyValidation()) {
+
                     dbHelper.addUser(new User(edtEmail.getText().toString(), edtPassword.getText().toString()));
                     Toast.makeText(MainActivity.this, "Added User", Toast.LENGTH_SHORT).show();
                     edtEmail.setText("");

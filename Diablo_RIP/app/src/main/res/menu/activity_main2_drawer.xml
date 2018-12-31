@@ -5,41 +5,37 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_cabeza"
-            android:icon="@drawable/cabeza"
-            android:title="Cabeza" />
+            android:id="@+id/nav_barbarian"
+            android:icon="@drawable/escudob"
+            android:title="@string/classBarbarian" />
         <item
-            android:id="@+id/nav_hombreras"
-            android:icon="@drawable/hombreras"
-            android:title="Hombreras" />
+            android:id="@+id/nav_demonhunter"
+            android:icon="@drawable/escudodemonhunter"
+            android:title="@string/classDemonhunter" />
         <item
-            android:id="@+id/nav_chest"
-            android:icon="@drawable/chest"
-            android:title="Torso" />
+            android:id="@+id/nav_monk"
+            android:icon="@drawable/escudomonk"
+            android:title="@string/classMonk" />
         <item
-            android:id="@+id/nav_brazalete"
-            android:icon="@drawable/brazalete"
-            android:title="Brazalete" />
+            android:id="@+id/nav_necromancer"
+            android:icon="@drawable/escudonecro"
+            android:title="@string/classNecromancer" />
         <item
-            android:id="@+id/nav_guantes"
-            android:icon="@drawable/guantes"
-            android:title="Guantes" />
+            android:id="@+id/nav_wizard"
+            android:icon="@drawable/escudow"
+            android:title="@string/classWizard" />
         <item
-            android:id="@+id/nav_cinturon"
-            android:icon="@drawable/cinturon"
-            android:title="Cinturon" />
+            android:id="@+id/nav_witchdoctor"
+            android:icon="@drawable/escudowd"
+            android:title="@string/classWitchDoctor" />
         <item
-            android:id="@+id/nav_pantalones"
-            android:icon="@drawable/pantalones"
-            android:title="Pantalones" />
+            android:id="@+id/nav_crusader"
+            android:icon="@drawable/escudocrusader"
+            android:title="@string/classCrusader" />
         <item
-            android:id="@+id/nav_botas"
-            android:icon="@drawable/botas"
-            android:title="Botas" />
-        <item
-            android:id="@+id/nav_armas"
+            android:id="@+id/nav_personalizado"
             android:icon="@drawable/armas"
-            android:title="Armas" />
+            android:title="Personalizados" />
     </group>
 
     <item android:title="Communicate">
