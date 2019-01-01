@@ -20,7 +20,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.senix.diablorip.model.Skills;
-import com.example.senix.diablorip.Adapters.SkillsAdapter;
+import com.example.senix.diablorip.adapters.SkillsAdapter;
 import com.example.senix.diablorip.R;
 
 

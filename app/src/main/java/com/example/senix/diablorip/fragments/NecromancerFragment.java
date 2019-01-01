@@ -20,7 +20,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.senix.diablorip.model.Skills;
-import com.example.senix.diablorip.Adapters.SkillsAdapter;
+import com.example.senix.diablorip.adapters.SkillsAdapter;
 import com.example.senix.diablorip.R;
 
 
@@ -44,7 +44,7 @@ public class NecromancerFragment extends Fragment {
 
 
 
-    private static final String api = "https://us.api.blizzard.com/d3/data/hero/necromancer?locale=en_US&access_token=USwSAx9NcNLmQAdw7THK90ESjoJYhXV2Fc";
+    private static final String api = "https://us.api.blizzard.com/d3/data/hero/necromancer?locale=en_US&access_token=USF7DYLzH3viy1CEbcCsV5I6XgKtS7HfYV";
     private static final String single = "https://us.api.blizzard.com/d3/data/hero/barbarian/skill/bash?locale=en_US&access_token=USwSAx9NcNLmQAdw7THK90ESjoJYhXV2Fc";
 
     @Override

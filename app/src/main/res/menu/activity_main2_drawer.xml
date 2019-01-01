@@ -36,6 +36,10 @@
             android:id="@+id/nav_personalizado"
             android:icon="@drawable/armas"
             android:title="Personalizados" />
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/cabeza"
+            android:title="Accounts" />
     </group>
 
     <item android:title="Communicate">

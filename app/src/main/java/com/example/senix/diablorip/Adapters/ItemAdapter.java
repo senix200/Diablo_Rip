@@ -1,4 +1,4 @@
-package com.example.senix.diablorip.Adapters;
+package com.example.senix.diablorip.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

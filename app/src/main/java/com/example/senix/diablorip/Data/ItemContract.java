@@ -1,4 +1,4 @@
-package com.example.senix.diablorip.Data;
+package com.example.senix.diablorip.data;
 
 import android.provider.BaseColumns;
 
