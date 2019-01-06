@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@drawable/boxbg"
+    android:id="@+id/cardview">
+
+
+    <Button
+        android:id="@+id/Templar"
+        android:layout_width="121dp"
+        android:layout_height="125dp"
+        android:background="@drawable/templar" />
+
+    <TextView
+        android:id="@+id/nombreTemplar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="145dp"
+        android:text="@string/followerTemplar"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="210dp"
+        android:layout_height="78dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="0dp"
+        android:text="@string/textoTemplar"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/Canalla"
+        android:layout_width="121dp"
+        android:layout_height="125dp"
+        android:layout_below="@+id/Templar"
+        android:layout_alignStart="@+id/Templar"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/scoundrel" />
+
+    <TextView
+        android:id="@+id/nombreCanalla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="217dp"
+        android:layout_marginEnd="147dp"
+        android:text="@string/followerScoundrel"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="215dp"
+        android:layout_height="87dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="244dp"
+        android:layout_marginEnd="11dp"
+        android:text="@string/textoScoundrel"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Magic"
+        android:layout_width="128dp"
+        android:layout_height="124dp"
+        android:layout_below="@+id/Canalla"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="11dp"
+        android:layout_toStartOf="@+id/nombreTemplar"
+        android:background="@drawable/enchantress" />
+
+    <TextView
+        android:id="@+id/nombreMagic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="403dp"
+        android:layout_marginEnd="144dp"
+        android:text="@string/followerEnchantress"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="204dp"
+        android:layout_height="92dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="436dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/textoEnchantress"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+

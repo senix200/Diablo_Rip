@@ -14,6 +14,7 @@ import android.view.View;
 
 import com.example.senix.diablorip.R;
 import com.example.senix.diablorip.helpers.InputValidation;
+import com.example.senix.diablorip.model.User;
 import com.example.senix.diablorip.sql.DatabaseHelper;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
@@ -120,6 +121,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Intent accountsIntent = new Intent(activity, Main2Activity.class);
             accountsIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
             emptyInputEditText();
+
             startActivity(accountsIntent);
 
 

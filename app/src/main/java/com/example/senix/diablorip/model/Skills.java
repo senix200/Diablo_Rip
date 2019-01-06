@@ -12,6 +12,7 @@ public class Skills {
         this.imagenURL = imagenURL;
         this.nivel = nivel;
         this.descripcion = descripcion;
+
     }
 
     public String getName() {
@@ -45,4 +46,5 @@ public class Skills {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
 }

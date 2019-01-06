@@ -4,7 +4,7 @@
     android:id="@+id/nestedScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/logindiablo"
+    android:background="@drawable/diablofondo"
     android:paddingBottom="20dp"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
@@ -27,24 +27,28 @@
             android:id="@+id/textInputLayoutEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="40dp"
+            android:textColorHint="@color/colorWhite">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/textInputEditTextEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/colorWhite"
                 android:hint="@string/hint_email"
                 android:inputType="text"
-                android:textColorHint="@color/colorWhite"
                 android:maxLines="1"
-                android:textColor="@android:color/white" />
+                android:backgroundTint="@color/colorWhite"
+                 />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/textInputLayoutPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:textColorHint="@color/colorWhite">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/textInputEditTextPassword"
@@ -52,9 +56,10 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_password"
                 android:inputType="textPassword"
-                android:textColorHint="@color/colorWhite"
                 android:maxLines="1"
-                android:textColor="@android:color/white" />
+                android:textColorHint="@color/colorWhite"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorWhite"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.v7.widget.AppCompatButton

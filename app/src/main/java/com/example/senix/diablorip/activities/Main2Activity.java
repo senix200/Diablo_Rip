@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -15,20 +14,23 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.example.senix.diablorip.data.DataBaseRoom;
-import com.example.senix.diablorip.adapters.ItemAdapter;
 import com.example.senix.diablorip.R;
 import com.example.senix.diablorip.fragments.BarbarianFragment;
 import com.example.senix.diablorip.fragments.CrusaderFragment;
 import com.example.senix.diablorip.fragments.DemonHunterFragment;
+import com.example.senix.diablorip.fragments.EnchantressFragment;
+import com.example.senix.diablorip.fragments.Fragment_personalizado;
+import com.example.senix.diablorip.fragments.MainFragment;
 import com.example.senix.diablorip.fragments.MonkFragment;
 import com.example.senix.diablorip.fragments.NecromancerFragment;
+import com.example.senix.diablorip.fragments.ScoundrelFragment;
+import com.example.senix.diablorip.fragments.TemplarFragment;
 import com.example.senix.diablorip.fragments.WitchDoctorFragment;
 import com.example.senix.diablorip.fragments.WizardFragment;
 import com.example.senix.diablorip.model.Skills;
 
 
-public class Main2Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BarbarianFragment.OnSkillSelected, DemonHunterFragment.OnSkillSelected, MonkFragment.OnSkillSelected, NecromancerFragment.OnSkillSelected, WitchDoctorFragment.OnSkillSelected, WizardFragment.OnSkillSelected, CrusaderFragment.OnSkillSelected {
+public class Main2Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BarbarianFragment.OnSkillSelected, DemonHunterFragment.OnSkillSelected, MonkFragment.OnSkillSelected, NecromancerFragment.OnSkillSelected, WitchDoctorFragment.OnSkillSelected, WizardFragment.OnSkillSelected, CrusaderFragment.OnSkillSelected, TemplarFragment.OnSkillSelected, EnchantressFragment.OnSkillSelected, ScoundrelFragment.OnSkillSelected {
     private TextView tvUser;
 
 
@@ -49,6 +51,12 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        Fragment fragment = new MainFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.content_fragment, fragment)
+                .commit();
+
     }
 
 
@@ -65,12 +73,12 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main2, menu);
+
         tvUser = findViewById(R.id.tvUser);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
-            tvUser.setText(bundle.getString("user"));
+            tvUser.setText(bundle.getString("EMAIL"));
         }
         return true;
     }
@@ -83,9 +91,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -99,9 +105,11 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         int id = item.getItemId();
         Fragment fragment = null;
 
-        if (id == R.id.nav_barbarian) {
+        if (id == R.id.nav_home) {
+            fragment = new MainFragment();
+        } else if (id == R.id.nav_barbarian) {
             fragment = new BarbarianFragment();
-        } else if (id == R.id.nav_demonhunter) {
+        }else if (id == R.id.nav_demonhunter) {
             fragment = new DemonHunterFragment();
         } else if (id == R.id.nav_monk) {
             fragment = new MonkFragment();
@@ -130,7 +138,11 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
 
     @Override
     public void onChange(Skills skills) {
-        Intent intent = new Intent(Main2Activity.this, BarbarianFragment.class);
-        startActivity(intent);
+        Fragment fragment = new DetailsSkillActivity();
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.content_fragment, fragment)
+                .commit();
     }
 }
