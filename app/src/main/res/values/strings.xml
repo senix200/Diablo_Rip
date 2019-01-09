@@ -5,9 +5,9 @@
 
     <!--String del POPUP-->
     <string name="popup_title">Registra un Objeto</string>
-    <string name="pista_objeto">Nombre objeto</string>
-    <string name="pista_descripcion">Descripcion</string>
-    <string name="guardar">Guardar</string>
+    <string name="hint_object">Nombre objeto</string>
+    <string name="hint_description">Descripcion</string>
+    <string name="save">Save</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>

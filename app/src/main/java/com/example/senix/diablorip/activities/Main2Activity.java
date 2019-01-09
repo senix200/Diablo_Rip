@@ -1,6 +1,5 @@
 package com.example.senix.diablorip.activities;
 
-import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
@@ -18,6 +17,7 @@ import com.example.senix.diablorip.R;
 import com.example.senix.diablorip.fragments.BarbarianFragment;
 import com.example.senix.diablorip.fragments.CrusaderFragment;
 import com.example.senix.diablorip.fragments.DemonHunterFragment;
+import com.example.senix.diablorip.fragments.DetailsSkillFragment;
 import com.example.senix.diablorip.fragments.EnchantressFragment;
 import com.example.senix.diablorip.fragments.Fragment_personalizado;
 import com.example.senix.diablorip.fragments.MainFragment;
@@ -138,7 +138,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
 
     @Override
     public void onChange(Skills skills) {
-        Fragment fragment = new DetailsSkillActivity();
+        Fragment fragment = new DetailsSkillFragment();
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()

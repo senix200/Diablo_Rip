@@ -1,4 +1,4 @@
-package com.example.senix.diablorip.activities;
+package com.example.senix.diablorip.fragments;
 
 
 import android.os.Bundle;
@@ -34,7 +34,7 @@ import java.util.List;
 
 import android.support.v4.app.Fragment;
 
-public class DetailsSkillActivity extends Fragment {
+public class DetailsSkillFragment extends Fragment {
     private RecyclerView rList;
     private List<Runes> runesList;
     private RequestQueue mRequestQueue;

@@ -17,15 +17,6 @@ public class Item {
     private String description;
 
 
-    public Item() {
-    }
-
-    public Item(long id, String name, String description) {
-        this.name = name;
-        this.description = description;
-        this.id = id;
-
-    }
 
     public Item(String name,  String description) {
         this.name = name;

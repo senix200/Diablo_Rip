@@ -3,9 +3,6 @@
     <string name="app_name">Diablo RIP</string>
     <string name="title_activity_main2">Diablo Rip</string>
     <string name="popup_title">Registra un Objeto</string>
-    <string name="pista_objeto">Nombre Objeto</string>
-    <string name="pista_descripcion">Descripcion</string>
-    <string name="guardar">Guardar</string>
     <string name="navigation_drawer_open">Abre el menu</string>
     <string name="navigation_drawer_close">Cierra el menu</string>
     <string name="nav_header_desc">Cabecero de navegacion</string>
@@ -47,4 +44,7 @@
     <string name="text_login">Iniciar sesión</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="hint_object">Nombre Objeto</string>
+    <string name="hint_description">Descripcion</string>
+    <string name="save">Guardar</string>
 </resources>
