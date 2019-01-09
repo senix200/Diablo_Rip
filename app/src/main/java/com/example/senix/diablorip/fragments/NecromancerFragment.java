@@ -1,12 +1,10 @@
 package com.example.senix.diablorip.fragments;
 
-import android.support.v4.app.Fragment;
+
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,7 +29,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 
 public class NecromancerFragment extends Fragment {
@@ -44,7 +44,7 @@ public class NecromancerFragment extends Fragment {
 
 
 
-    private static final String api = "https://us.api.blizzard.com/d3/data/hero/necromancer?locale=en_US&access_token=USVlM3J83VCmiS9aM42qk64i1Pmh23yIIY";
+    private static final String api = "https://us.api.blizzard.com/d3/data/hero/necromancer?locale=en_US&access_token=US9AA2271eyPZ2DG9FnATCZKHB1gYCYMeF";
     private static final String single = "https://us.api.blizzard.com/d3/data/hero/barbarian/skill/bash?locale=en_US&access_token=USwSAx9NcNLmQAdw7THK90ESjoJYhXV2Fc";
 
     @Override

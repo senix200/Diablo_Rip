@@ -1,8 +1,8 @@
 package com.example.senix.diablorip.adapters;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +13,8 @@ import java.util.List;
 
 import com.example.senix.diablorip.R;
 import com.example.senix.diablorip.model.Item;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
@@ -51,6 +53,11 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         return items.size();
     }
 
+    public void addItems(List<Item> list){
+        items=list;
+        notifyDataSetChanged();
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView itemName;
@@ -71,14 +78,14 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             editItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    listener.onButtonCliked(view, getAdapterPosition());
+                    listener.onButtonCliked(view, items.get(getAdapterPosition()));
                 }
             });
 
             deleteItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    listener.onButtonCliked(view, getAdapterPosition());
+                    listener.onButtonCliked(view, items.get(getAdapterPosition()));
                 }
             });
 
@@ -86,6 +93,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     }
 
     public interface OnButtonClickedListener {
-        void onButtonCliked(View v, int position);
+        void onButtonCliked(View v, Item item);
     }
 }

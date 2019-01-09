@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Diablo_Rip.iml" filepath="$PROJECT_DIR$/Diablo_Rip.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Diablo_Rip_IntentoDeLivedata.iml" filepath="$PROJECT_DIR$/Diablo_Rip_IntentoDeLivedata.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

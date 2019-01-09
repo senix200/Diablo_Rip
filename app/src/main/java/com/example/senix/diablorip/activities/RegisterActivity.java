@@ -1,20 +1,21 @@
 package com.example.senix.diablorip.activities;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
-import android.support.design.widget.TextInputEditText;
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.widget.NestedScrollView;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatTextView;
+import androidx.annotation.Nullable;
 import android.view.View;
 
 import com.example.senix.diablorip.R;
 import com.example.senix.diablorip.helpers.InputValidation;
 import com.example.senix.diablorip.model.User;
 import com.example.senix.diablorip.sql.DatabaseHelper;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.core.widget.NestedScrollView;
 
 /**
  * Created by lalit on 8/27/2016.

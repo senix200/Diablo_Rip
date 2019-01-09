@@ -1,12 +1,11 @@
 package com.example.senix.diablorip.data;
-
-
-import android.arch.persistence.room.Database;
-import android.arch.persistence.room.Room;
-import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
 import com.example.senix.diablorip.model.Item;
+
+import androidx.room.Database;
+import androidx.room.RoomDatabase;
+import androidx.room.Room;
 
 @Database(entities = {Item.class}, version=2, exportSchema = false)
 public abstract class DataBaseRoom extends RoomDatabase {

@@ -2,8 +2,7 @@ package com.example.senix.diablorip.adapters;
 
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +14,7 @@ import com.example.senix.diablorip.model.Runes;
 
 import java.util.List;
 
-
+import androidx.recyclerview.widget.RecyclerView;
 
 public class RunesAdapter extends RecyclerView.Adapter<RunesAdapter.ViewHolder>{
 
@@ -31,7 +30,7 @@ public class RunesAdapter extends RecyclerView.Adapter<RunesAdapter.ViewHolder>{
     @NonNull
     @Override
     public RunesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(context).inflate(R.layout.details_skills_layout,viewGroup, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.details_skills_activity,viewGroup, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }

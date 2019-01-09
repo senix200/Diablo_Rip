@@ -1,37 +1,36 @@
 package com.example.senix.diablorip.activities;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.senix.diablorip.R;
 import com.example.senix.diablorip.fragments.BarbarianFragment;
 import com.example.senix.diablorip.fragments.CrusaderFragment;
 import com.example.senix.diablorip.fragments.DemonHunterFragment;
-import com.example.senix.diablorip.fragments.DetailsSkillFragment;
-import com.example.senix.diablorip.fragments.EnchantressFragment;
 import com.example.senix.diablorip.fragments.Fragment_personalizado;
 import com.example.senix.diablorip.fragments.MainFragment;
 import com.example.senix.diablorip.fragments.MonkFragment;
 import com.example.senix.diablorip.fragments.NecromancerFragment;
-import com.example.senix.diablorip.fragments.ScoundrelFragment;
-import com.example.senix.diablorip.fragments.TemplarFragment;
 import com.example.senix.diablorip.fragments.WitchDoctorFragment;
 import com.example.senix.diablorip.fragments.WizardFragment;
 import com.example.senix.diablorip.model.Skills;
+import com.google.android.material.navigation.NavigationView;
+
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 
-public class Main2Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BarbarianFragment.OnSkillSelected, DemonHunterFragment.OnSkillSelected, MonkFragment.OnSkillSelected, NecromancerFragment.OnSkillSelected, WitchDoctorFragment.OnSkillSelected, WizardFragment.OnSkillSelected, CrusaderFragment.OnSkillSelected, TemplarFragment.OnSkillSelected, EnchantressFragment.OnSkillSelected, ScoundrelFragment.OnSkillSelected {
+public class Main2Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BarbarianFragment.OnSkillSelected, DemonHunterFragment.OnSkillSelected, MonkFragment.OnSkillSelected, NecromancerFragment.OnSkillSelected, WitchDoctorFragment.OnSkillSelected, WizardFragment.OnSkillSelected, CrusaderFragment.OnSkillSelected {
     private TextView tvUser;
+    boolean isMultiPanel;
 
 
     @Override
@@ -50,7 +49,6 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
         Fragment fragment = new MainFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
@@ -73,12 +71,12 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-
+        getMenuInflater().inflate(R.menu.main2, menu);
         tvUser = findViewById(R.id.tvUser);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
-            tvUser.setText(bundle.getString("EMAIL"));
+            tvUser.setText(bundle.getString("user_id"));
         }
         return true;
     }
@@ -91,7 +89,9 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-
+        if (id == R.id.action_settings) {
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -105,11 +105,9 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         int id = item.getItemId();
         Fragment fragment = null;
 
-        if (id == R.id.nav_home) {
-            fragment = new MainFragment();
-        } else if (id == R.id.nav_barbarian) {
+        if (id == R.id.nav_barbarian) {
             fragment = new BarbarianFragment();
-        }else if (id == R.id.nav_demonhunter) {
+        } else if (id == R.id.nav_demonhunter) {
             fragment = new DemonHunterFragment();
         } else if (id == R.id.nav_monk) {
             fragment = new MonkFragment();
@@ -123,8 +121,6 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             fragment = new CrusaderFragment();
         }else if (id == R.id.nav_personalizado) {
             fragment = new Fragment_personalizado();
-        }else if (id == R.id.nav_account) {
-            fragment = new UsersListActivity();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -137,12 +133,20 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
     }
 
     @Override
-    public void onChange(Skills skills) {
-        Fragment fragment = new DetailsSkillFragment();
+    public void onChange(Skills skill) {
+
+
+
+        Fragment fragment = new DetailsSkillActivity();
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.content_fragment, fragment)
                 .commit();
+        //Intent intent = new Intent(Main2Activity.this, DetailsSkillActivity.class);
+        //Bundle bundle = new Bundle();
+        //bundle.putSerializable("skill", skills);
+        //intent.putExtras(bundle);
+        //startActivity(intent);
     }
 }

@@ -1,18 +1,27 @@
 package com.example.senix.diablorip.model;
 
-public class Skills {
+import java.io.Serializable;
+
+public class Skills implements Serializable {
 
     private String name;
     private String imagenURL;
     private int nivel;
     private String descripcion;
+    private String clase;
 
-    public Skills(String name, String descripcion,int nivel, String imagenURL ) {
+    public Skills(String name, String descripcion,int nivel, String imagenURL, String clase ) {
         this.name = name;
         this.imagenURL = imagenURL;
         this.nivel = nivel;
         this.descripcion = descripcion;
-
+        this.clase = clase;
+    }
+    public Skills(String name, String descripcion,int nivel, String clase ) {
+        this.name = name;
+        this.nivel = nivel;
+        this.descripcion = descripcion;
+        this.clase = clase;
     }
 
     public String getName() {
@@ -47,4 +56,11 @@ public class Skills {
         this.descripcion = descripcion;
     }
 
+    public String getClase() {
+        return clase;
+    }
+
+    public void setClase(String name) {
+        this.clase = clase;
+    }
 }

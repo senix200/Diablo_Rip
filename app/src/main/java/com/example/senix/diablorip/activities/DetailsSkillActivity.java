@@ -1,12 +1,10 @@
-package com.example.senix.diablorip.fragments;
+package com.example.senix.diablorip.activities;
 
 
 import android.os.Bundle;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,10 +18,8 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.senix.diablorip.R;
 import com.example.senix.diablorip.adapters.RunesAdapter;
-import com.example.senix.diablorip.adapters.SkillsAdapter;
 import com.example.senix.diablorip.model.Skills;
 import com.example.senix.diablorip.model.Runes;
-
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,19 +28,21 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-public class DetailsSkillFragment extends Fragment {
+public class DetailsSkillActivity extends Fragment {
     private RecyclerView rList;
     private List<Runes> runesList;
     private RequestQueue mRequestQueue;
     private RecyclerView.Adapter adapter;
+    private Skills skill;
 
 
 
-
-    private static final String api = "https://us.api.blizzard.com/d3/data/hero/barbarian?locale=en_US&access_token=USVlM3J83VCmiS9aM42qk64i1Pmh23yIIY";
-    private String single = "https://us.api.blizzard.com/d3/data/hero/barbarian/skill/bash?locale=en_US&access_token=USVlM3J83VCmiS9aM42qk64i1Pmh23yIIY";
+    private static final String api = "https://us.api.blizzard.com/d3/data/hero/barbarian?locale=en_US&access_token=USCtMOsciHj6FC3IjwEGr5LsqkoOkqQHd0";
+    private String single = "https://us.api.blizzard.com/d3/data/hero/barbarian/skill/bash?locale=en_US&access_token=US9AA2271eyPZ2DG9FnATCZKHB1gYCYMeF";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -70,7 +68,6 @@ public class DetailsSkillFragment extends Fragment {
     private void getData() {
         runesList.clear();
         mRequestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
-        single = "https://us.api.blizzard.com/d3/data/hero/barbarian/skill/bash?locale=en_US&access_token=US9AA2271eyPZ2DG9FnATCZKHB1gYCYMeF";
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, single, null,
                 new Response.Listener<JSONObject>() {
                     @Override

@@ -2,8 +2,7 @@ package com.example.senix.diablorip.adapters;
 
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +15,9 @@ import com.example.senix.diablorip.model.Skills;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
+
 public class SkillsAdapter extends RecyclerView.Adapter<SkillsAdapter.ViewHolder>{
 
     private List<Skills> skills;

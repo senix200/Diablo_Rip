@@ -1,21 +1,17 @@
 <resources>
     <string name="app_name">Diablo RIP</string>
     <string name="title_activity_main2">Diablo RIP</string>
-
-
     <!--String del POPUP-->
     <string name="popup_title">Registra un Objeto</string>
-    <string name="hint_object">Nombre objeto</string>
-    <string name="hint_description">Descripcion</string>
-    <string name="save">Save</string>
+    <string name="pista_objeto">Nombre objeto</string>
+    <string name="pista_descripcion">Descripcion</string>
+    <string name="guardar">Guardar</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
-
     <!--String del registro-->
     <string name="text_accounts">All Accounts</string>
     <string name="hint_name">Name</string>
@@ -38,7 +34,6 @@
     <string name="text_title">Diablo RIP</string>
 
     <!--String de las clases-->
-    <string name="menuHome">Home</string>
     <string name="classBarbarian">Barbarian</string>
     <string name="classDemonhunter">Demon Hunter</string>
     <string name="classMonk">Monk</string>
@@ -46,17 +41,8 @@
     <string name="classWizard">Wizard</string>
     <string name="classWitchDoctor">Witch Doctor</string>
     <string name="classCrusader">Crusader</string>
-    <string name="customItems">Custom</string>
 
 
-
-    <!--String de las clases-->
-    <string name="followerTemplar">Templar</string>
-    <string name="followerScoundrel">Scoundrel</string>
-    <string name="followerEnchantress">Enchantress</string>
-    <string name="textoTemplar">Kormac, the Templar, a dedicated master of melee arms and armor.</string>
-    <string name="textoScoundrel">Lyndon, the Scoundrel, a selfish rake skilled in larceny and ranged weapons. </string>
-    <string name="textoEnchantress">Eirena, the Enchantress, a mysterious magic-user who can confuse and debilitate enemies. </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

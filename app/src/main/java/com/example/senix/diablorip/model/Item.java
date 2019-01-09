@@ -1,10 +1,11 @@
 package com.example.senix.diablorip.model;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
 
-import java.sql.Blob;
+import androidx.annotation.NonNull;
+
+
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 @Entity(tableName = "items")
 public class Item {
@@ -17,6 +18,15 @@ public class Item {
     private String description;
 
 
+    public Item() {
+    }
+
+    public Item(long id, String name, String description) {
+        this.name = name;
+        this.description = description;
+        this.id = id;
+
+    }
 
     public Item(String name,  String description) {
         this.name = name;
