@@ -39,12 +39,31 @@
 
     </EditText>
 
+    <ImageView
+        android:id="@+id/iconPreview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/popupItemName"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="185dp"
+        android:background="@drawable/armas" />
+
+    <EditText
+        android:id="@+id/urlimagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/iconPreview"
+        android:hint="URL de la imagen" />
+
 
     <Button
         android:id="@+id/popupSaveItemButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/popupItemDescription"
+        android:layout_below="@id/iconPreview"
         android:layout_alignStart="@+id/popupItemDescription"
         android:layout_marginStart="0dp"
         android:layout_marginTop="22dp"

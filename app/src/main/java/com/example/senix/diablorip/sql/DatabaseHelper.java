@@ -11,17 +11,15 @@ import com.example.senix.diablorip.model.User;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by lalit on 9/12/2016.
- */
+
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Database Version
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     // Database Name
-    //private static final String DATABASE_NAME = "UserManager.db";
-    private static final String DATABASE_NAME = "Items.db";
+    private static final String DATABASE_NAME = "UserManager.db";
+    //private static final String DATABASE_NAME = "Items.db";
 
     // User table name
     private static final String TABLE_USER = "user";
