@@ -1,7 +1,6 @@
 package com.example.senix.diablorip.fragments;
 
-import android.app.AlertDialog;
-import android.os.AsyncTask;
+
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import android.text.TextUtils;
@@ -10,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.senix.diablorip.adapters.ItemAdapter;
@@ -19,13 +17,11 @@ import com.example.senix.diablorip.data.DataBaseRoom;
 import com.example.senix.diablorip.R;
 import com.example.senix.diablorip.model.Item;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -64,7 +60,7 @@ public class Fragment_personalizado extends Fragment implements ItemAdapter.OnBu
             }
         });
 
-        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
+        FloatingActionButton fab = view.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,19 +85,9 @@ public class Fragment_personalizado extends Fragment implements ItemAdapter.OnBu
         final EditText itemDescription= view.findViewById(R.id.popupItemDescription);
         final EditText urlimagen= view.findViewById(R.id.urlimagen);
         Button saveButton= view.findViewById(R.id.popupSaveItemButton);
-        final ImageView preview = view.findViewById(R.id.iconPreview);
 
-        final String url = "https://blzmedia-a.akamaihd.net/d3/icons/items/large/sword_2h_206_demonhunter_male.png";
-        preview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(urlimagen.getText().toString().equals("")){
-                    Picasso.get().load(url).fit().into(preview);
-                }else{
-                    Picasso.get().load(urlimagen.getText().toString()).fit().into(preview);
-                }
-            }
-        });
+
+
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -139,19 +125,8 @@ public class Fragment_personalizado extends Fragment implements ItemAdapter.OnBu
         final EditText itemDescription= view.findViewById(R.id.popupItemDescription);
         final EditText urlimagen= view.findViewById(R.id.urlimagen);
         Button saveButton= view.findViewById(R.id.popupSaveItemButton);
-        final ImageView preview = view.findViewById(R.id.iconPreview);
 
-        final String url = "https://blzmedia-a.akamaihd.net/d3/icons/items/large/sword_2h_206_demonhunter_male.png";
-        preview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(urlimagen.getText().toString().equals("")){
-                    Picasso.get().load(url).fit().into(preview);
-                }else{
-                    Picasso.get().load(urlimagen.getText().toString()).fit().into(preview);
-                }
-            }
-        });
+
 
         itemName.setText(item.getName());
         itemDescription.setText(item.getDescription());

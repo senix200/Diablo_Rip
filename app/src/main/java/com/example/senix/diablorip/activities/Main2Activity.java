@@ -123,11 +123,9 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             fragment = new CrusaderFragment();
         }else if (id == R.id.nav_personalizado) {
             fragment = new Fragment_personalizado();
-        }else if (id == R.id.nav_account) {
-            fragment = new UsersListActivity();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.content_fragment, fragment)

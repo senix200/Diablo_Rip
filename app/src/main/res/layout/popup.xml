@@ -47,7 +47,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="3dp"
         android:layout_marginTop="185dp"
-        android:background="@drawable/armas" />
+        android:background="@drawable/orange" />
 
     <EditText
         android:id="@+id/urlimagen"

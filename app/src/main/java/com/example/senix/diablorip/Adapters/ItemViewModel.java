@@ -8,7 +8,6 @@ import android.widget.Toast;
 
 import com.example.senix.diablorip.data.DataBaseRoom;
 import com.example.senix.diablorip.model.Item;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
 
@@ -70,8 +69,6 @@ public class ItemViewModel extends AndroidViewModel {
             } else {
                 Toast.makeText(getApplication(), "Item added", Toast.LENGTH_LONG)
                         .show();
-                //itemList.add(0,item);
-                //adapter.notifyItemInserted(0);
             }
         }
     }
@@ -104,7 +101,6 @@ public class ItemViewModel extends AndroidViewModel {
             } else {
                 Toast.makeText(getApplication(),  "Item updated", Toast.LENGTH_LONG)
                         .show();
-                //adapter.notifyItemChanged(position);
             }
         }
     }
@@ -139,9 +135,6 @@ public class ItemViewModel extends AndroidViewModel {
             } else {
                 Toast.makeText(getApplication(), "Item deleted", Toast.LENGTH_LONG)
                         .show();
-                //itemList.remove(position);
-                //adapter.notifyItemRemoved(position);
-                //adapter.notifyItemRangeRemoved(position, adapter.getItemCount());
             }
         }
     }

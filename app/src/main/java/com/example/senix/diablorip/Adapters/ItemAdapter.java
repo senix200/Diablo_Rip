@@ -45,11 +45,16 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
         viewHolder.itemName.setText(p.getName());
         viewHolder.itemDescription.setText(p.getDescription());
-        if(p.getImagenUrl().equals("") || p.getImagenUrl().equals("\n")){
-            Picasso.get().load(url).fit().into(viewHolder.imagenUrl);
-        }else{
-            Picasso.get().load(p.getImagenUrl()).fit().into(viewHolder.imagenUrl);
-        }
+        try {
+            if(p.getImagenUrl().equals("") || p.getImagenUrl().equals("\n")){
+                Picasso.get().load(url).fit().into(viewHolder.imagenUrl);
+            }else{
+                Picasso.get().load(p.getImagenUrl()).fit().into(viewHolder.imagenUrl);
+            }
+
+        }catch (IllegalArgumentException iae){}
+
+
 
     }
 

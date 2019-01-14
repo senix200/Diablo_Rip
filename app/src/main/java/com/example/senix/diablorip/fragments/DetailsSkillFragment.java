@@ -41,8 +41,8 @@ public class DetailsSkillFragment extends Fragment {
 
 
 
-    private static final String api = "https://us.api.blizzard.com/d3/data/hero/barbarian?locale=en_US&access_token=USVlM3J83VCmiS9aM42qk64i1Pmh23yIIY";
-    private String single = "https://us.api.blizzard.com/d3/data/hero/barbarian/skill/bash?locale=en_US&access_token=USVlM3J83VCmiS9aM42qk64i1Pmh23yIIY";
+
+    private String single = "https://us.api.blizzard.com/d3/data/hero/barbarian/skill/bash?locale=en_US&access_token=USYIUPWh1etWLMUEBHRuID6EGb8J7QxgOh";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -68,7 +68,6 @@ public class DetailsSkillFragment extends Fragment {
     private void getData() {
         runesList.clear();
         mRequestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
-        single = "https://us.api.blizzard.com/d3/data/hero/barbarian/skill/bash?locale=en_US&access_token=US9AA2271eyPZ2DG9FnATCZKHB1gYCYMeF";
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, single, null,
                 new Response.Listener<JSONObject>() {
                     @Override

@@ -1,4 +1,5 @@
 <resources>
+    <!--String de la APP-->
     <string name="app_name">Diablo RIP</string>
     <string name="title_activity_main2">Diablo RIP</string>
 

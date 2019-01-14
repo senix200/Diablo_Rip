@@ -14,8 +14,8 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:background="@drawable/headerbanner"
+            android:layout_height="128dp"
+            android:background="@drawable/banner1"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>

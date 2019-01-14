@@ -31,7 +31,7 @@ public class RunesAdapter extends RecyclerView.Adapter<RunesAdapter.ViewHolder>{
     @NonNull
     @Override
     public RunesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(context).inflate(R.layout.details_skills_layout,viewGroup, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.runes,viewGroup, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }

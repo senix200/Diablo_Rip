@@ -44,8 +44,8 @@ public class DemonHunterFragment extends Fragment {
 
 
 
-    private static final String api = "https://us.api.blizzard.com/d3/data/hero/demon-hunter?locale=en_US&access_token=USVlM3J83VCmiS9aM42qk64i1Pmh23yIIY";
-    private static final String single = "https://us.api.blizzard.com/d3/data/hero/barbarian/skill/bash?locale=en_US&access_token=USwSAx9NcNLmQAdw7THK90ESjoJYhXV2Fc";
+    private static final String api = "https://us.api.blizzard.com/d3/data/hero/demon-hunter?locale=en_US&access_token=USYIUPWh1etWLMUEBHRuID6EGb8J7QxgOh";
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
